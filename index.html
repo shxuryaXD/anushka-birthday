@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Anushka ♡</title>
+<style>
+:root {
+  --site-primary: #e8a9b7;
+  --site-on-primary: #421e2a;
+  --site-secondary: #f7dce2;
+  --site-on-secondary: #512b36;
+  --site-background: #fff7f6;
+  --site-on-background: #442a32;
+  --site-font-body: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  --site-font-heading: Georgia, 'Times New Roman', serif;
+  --site-heading-scale: 1;
+  --site-spacing-scale: 1;
+  --site-radius-scale: 1;
+  --site-decoration-opacity: 1;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--site-background); color: var(--site-on-background); font-family: var(--site-font-body); }
+#app { min-height: 100vh; width: 100%; border-radius: 0; overflow: hidden; background-color: var(--site-background); position: relative; }
+.decor { position: absolute; inset: 0; pointer-events: none; overflow: hidden; opacity: var(--site-decoration-opacity); }
+.spark { position: absolute; color: #d78a9d; animation: drift 9s ease-in-out infinite; font-size: 18px; }
+.spark:nth-child(1) { top: 9%; left: 9%; }
+.spark:nth-child(2) { top: 17%; right: 12%; animation-delay: -3s; }
+.spark:nth-child(3) { top: 54%; left: 5%; animation-delay: -5s; }
+.spark:nth-child(4) { top: 76%; right: 8%; animation-delay: -2s; }
+@keyframes drift { 50% { transform: translateY(-15px) rotate(12deg); } }
+main { position: relative; z-index: 1; max-width: 860px; margin: auto; padding: calc(28px * var(--site-spacing-scale)) 20px 70px; }
+.topline { text-align: center; letter-spacing: .23em; text-transform: uppercase; font-size: 10px; color: #a66b7a; }
+.hero { min-height: 76vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 30px 10px; }
+.eyebrow { color: #a66b7a; letter-spacing: .18em; text-transform: uppercase; font-size: 11px; }
+h1,h2,h3 { font-family: var(--site-font-heading); font-weight: 400; }
+h1 { font-size: clamp(54px, 12vw, 100px); line-height: .98; margin: 22px 0 18px; color: #7b3d50; }
+h1 span { font-style: italic; color: #c47b8e; }
+.subtitle { max-width: 460px; line-height: 1.8; font-size: 14px; color: #815f68; }
+button { font: inherit; cursor: pointer; border: 0; border-radius: 999px; padding: 14px 23px; background: var(--site-primary); color: var(--site-on-primary); box-shadow: 0 9px 24px #d99cac55; transition: transform .2s, box-shadow .2s; }
+button:hover { transform: translateY(-2px); box-shadow: 0 12px 26px #d99cac77; }
+.hero button { margin-top: 25px; }
+.section { margin: 40px 0 64px; text-align: center; }
+.kicker { font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: #ad7583; }
+h2 { font-size: clamp(34px, 7vw, 53px); color: #754354; margin: 12px 0 16px; }
+.lead { color: #866873; line-height: 1.8; max-width: 580px; margin: 0 auto; font-size: 14px; }
+.memory-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 13px; margin-top: 28px; }
+.memory { min-height: 170px; border-radius: calc(18px * var(--site-radius-scale)); background: linear-gradient(145deg, #f8dce2, #f3c9d2 60%, #eab7c4); display: flex; align-items: center; justify-content: center; flex-direction: column; padding: 16px; color: #764654; border: 1px solid #edc6d0; }
+.memory:nth-child(2) { background: linear-gradient(145deg, #f8e9df, #f3d6cc); }
+.memory:nth-child(3) { background: linear-gradient(145deg, #f4e4eb, #e8cddd); }
+.memory .emoji { font-size: 31px; margin-bottom: 13px; }
+.memory strong { font-family: var(--site-font-heading); font-size: 18px; font-weight: 400; }
+.memory small { font-size: 11px; margin-top: 7px; opacity: .8; }
+.note { background: #fffdfb; border: 1px solid #efd9dd; border-radius: calc(24px * var(--site-radius-scale)); padding: clamp(25px, 6vw, 48px); box-shadow: 0 18px 50px #7e45500c; text-align: left; position: relative; }
+.note:before { content: '“'; position: absolute; top: 0; right: 25px; font-family: Georgia,serif; font-size: 90px; color: #f1d5dc; }
+.note h3 { font-size: 30px; color: #854d5e; margin: 0 0 18px; }
+.note p { line-height: 1.95; font-size: 14px; color: #735660; margin: 0 0 13px; }
+.signature { text-align: right; font-family: var(--site-font-heading); font-style: italic; color: #ad6d80; font-size: 21px; margin-top: 24px; }
+.surprise-box { background: var(--site-secondary); border-radius: calc(22px * var(--site-radius-scale)); padding: 32px 20px; }
+#surprise { display: none; max-width: 500px; margin: 22px auto 0; padding: 22px; background: #fffaf9; border-radius: 16px; color: #744653; line-height: 1.8; font-family: var(--site-font-heading); font-size: 21px; }
+footer { text-align: center; color: #a77a85; font-size: 11px; letter-spacing: .08em; padding: 20px 0 5px; }
+#confetti { position: fixed; inset: 0; pointer-events: none; z-index: 5; overflow: hidden; }
+.confetti-piece { position: absolute; top: -20px; animation: fall 3.5s linear forwards; }
+@keyframes fall { to { transform: translateY(110vh) rotate(600deg); opacity: 0; } }
+@media (max-width: 600px) { .memory-grid { grid-template-columns: 1fr; } .memory { min-height: 125px; } .hero { min-height: 70vh; } }
+@media (prefers-reduced-motion: reduce) { *,*::before,*::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+</style>
+</head>
+<body>
+<div id="app">
+  <div class="decor" aria-hidden="true"><span class="spark">✧</span><span class="spark">♡</span><span class="spark">✦</span><span class="spark">♡</span></div>
+  <main>
+    <div class="topline">a little corner of the internet, just for you</div>
+    <section class="hero" id="home">
+      <div class="eyebrow">November 25 · a day made brighter</div>
+      <h1>For <span>Anushka</span></h1>
+      <p class="subtitle">Some people make ordinary days feel a little more magical. This little page is for one of those people.</p>
+      <button id="openBtn">Open your little surprise <span aria-hidden="true">♡</span></button>
+    </section>
+    <section class="section" id="memories">
+      <div class="kicker">the little things</div>
+      <h2>Made of moments</h2>
+      <p class="lead">The best memories are often the smallest ones — the laughs that last too long, the random conversations, and the moments you wish you could replay.</p>
+      <div class="memory-grid">
+        <div class="memory"><div class="emoji">🌷</div><strong>Little things</strong><small>that mean a lot</small></div>
+        <div class="memory"><div class="emoji">☁️</div><strong>Favourite days</strong><small>made unforgettable</small></div>
+        <div class="memory"><div class="emoji">✨</div><strong>More to come</strong><small>one memory at a time</small></div>
+      </div>
+      <p class="lead" style="margin-top:18px;font-size:12px;">You can replace these cards with your own photos and captions later.</p>
+    </section>
+    <section class="section">
+      <div class="kicker">a note for you</div>
+      <h2>Dear Anushka,</h2>
+      <div class="note">
+        <h3>A little reminder</h3>
+        <p>Happy birthday to someone who deserves all the softness, happiness, and beautiful surprises life has to offer.</p>
+        <p>I hope this new chapter brings you countless reasons to smile, dreams that come true, peaceful days, and people who remind you how special you are.</p>
+        <p>Thank you for being you. Never forget how much light you bring into the lives around you. Today is your day — I hope it feels as lovely as you make the world feel.</p>
+        <div class="signature">With all my love ♡</div>
+      </div>
+    </section>
+    <section class="section surprise-box">
+      <div class="kicker">one last thing</div>
+      <h2>Your little surprise</h2>
+      <p class="lead">There's one more message waiting for you. Tap below.</p>
+      <button id="surpriseBtn">Unlock it ✨</button>
+      <div id="surprise">If I could wrap up a wish for you, it would be this: may you always find reasons to be happy, courage to chase what you love, and warmth wherever you go. Happy birthday, Anushka. ♡</div>
+    </section>
+    <footer>made with love · just for Anushka ♡</footer>
+  </main>
+  <div id="confetti" aria-hidden="true"></div>
+</div>
+<script>
+const openBtn = document.getElementById('openBtn');
+const surpriseBtn = document.getElementById('surpriseBtn');
+const surprise = document.getElementById('surprise');
+function celebrate() {
+  const layer = document.getElementById('confetti');
+  const symbols = ['♡', '✦', '✧', '🌸'];
+  for (let i = 0; i < 34; i++) {
+    const piece = document.createElement('span');
+    piece.className = 'confetti-piece';
+    piece.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+    piece.style.left = Math.random() * 100 + '%';
+    piece.style.animationDelay = Math.random() * 1.2 + 's';
+    piece.style.fontSize = (12 + Math.random() * 16) + 'px';
+    piece.style.color = ['#c47b8e','#e5a7b6','#a66b7a','#d9a9bb'][Math.floor(Math.random()*4)];
+    layer.appendChild(piece);
+    setTimeout(() => piece.remove(), 5000);
+  }
+}
+openBtn.addEventListener('click', () => {
+  celebrate();
+  document.getElementById('memories').scrollIntoView({ behavior: 'smooth' });
+});
+surpriseBtn.addEventListener('click', () => {
+  surprise.style.display = 'block';
+  surpriseBtn.textContent = 'A wish, just for you ♡';
+  surpriseBtn.disabled = true;
+  celebrate();
+});
+</script>
+</body>
+</html>
